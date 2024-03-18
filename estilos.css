@@ -37,8 +37,21 @@ html {
   color: rgb(240, 240, 240);
   text-shadow: 3px 2px 9px rgb(0, 0, 0);
   font-size: 35px;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
 }
 
+@keyframes aparecerDesdeElCostado {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .btn {
   text-transform: uppercase;
   font-weight: bold;
@@ -48,6 +61,7 @@ html {
 }
 .btn:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .articulo {
@@ -132,6 +146,9 @@ html {
   font-size: 36px;
   text-shadow: 3px 2px 9px rgb(125, 95, 95);
   margin-top: 30px;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
 }
 
 .sobre-nosotros h2 {
@@ -221,6 +238,9 @@ html {
 }
 .jumbotron3 h1 {
   text-shadow: 3px 2px 9px rgb(125, 95, 95);
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
 }
 
 .hab1,
@@ -247,9 +267,9 @@ html {
 .suite {
   padding-top: 80px;
 }
-.standard h3,
-.deluxe h3,
-.suite h3 {
+.standard h2,
+.deluxe h2,
+.suite h2 {
   margin-bottom: 30px;
   margin-left: 40px;
   margin-right: 80px;
@@ -283,9 +303,9 @@ section i {
     font-size: 20px;
     margin: 30px;
   }
-  section .standard h3,
-  section .deluxe h3,
-  section .suite h3 {
+  section .standard h2,
+  section .deluxe h2,
+  section .suite h2 {
     font-size: 26px;
   }
   section .imgh1,
@@ -318,6 +338,9 @@ section i {
 }
 .jumbotron4 h1 {
   text-shadow: 3px 2px 9px rgb(125, 95, 95);
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
 }
 
 .img1,
@@ -369,6 +392,14 @@ section i {
   padding: 20px 15px;
   text-align: justify;
   border: 1px solid rgb(202, 202, 202);
+}
+
+.accordion-header .accordion-button {
+  font-size: 25px;
+}
+
+.accordion-body {
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 480px) {
@@ -512,6 +543,9 @@ section i {
 .jumbotron5 h1 {
   color: rgb(240, 240, 240);
   text-shadow: 3px 2px 9px rgb(0, 0, 0);
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
 }
 
 .container {
@@ -537,10 +571,10 @@ section i {
   margin-bottom: 20px;
 }
 #contact-form .btn {
-  background-color: rgb(174, 221, 148);
+  background-image: linear-gradient(to left, rgb(95, 163, 57), rgb(174, 221, 148));
 }
 #contact-form .btn:hover {
-  box-shadow: 0 0 10px rgb(174, 221, 148);
+  box-shadow: 0 0 10px rgb(125, 95, 95);
 }
 
 @media only screen and (max-width: 992px) {
@@ -601,6 +635,9 @@ footer a:hover {
   font-size: 30px;
   border: 2px solid rgb(255, 255, 255);
 }
+.whatsapp:hover {
+  color: rgb(162, 162, 162);
+}
 
 .subir {
   height: 40px;
@@ -615,6 +652,9 @@ footer a:hover {
   line-height: 40px;
   border-radius: 50%;
   box-shadow: 0 0 5px 3px rgb(249, 249, 249);
+}
+.subir:hover {
+  color: rgb(162, 162, 162);
 }
 
 @media only screen and (max-width: 768px) {
@@ -631,8 +671,14 @@ footer a:hover {
   .redes a {
     margin: 0 5px;
   }
-  .degradado, .title-huerta {
+  .degradado, .title-huerta, .titulog, .card-title {
     font-size: 22px;
+  }
+  .accordion-header .accordion-button {
+    font-size: 22px;
+  }
+  .accordion-body {
+    font-size: 18px;
   }
   .whatsapp, .subir {
     right: 20px;

@@ -1,6 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Merienda:wght@300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap");
 
+$color1: rgba(174, 221, 148, 1);
+$color2: rgb(95, 163, 57);
+$color3: rgba(240, 240, 240, 1);
+
+@mixin degradado {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 40px;
+    font-size: 30px;
+    font-family: "Quicksand", sans-serif;
+}
+
+@mixin animacion {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: aparecerDesdeElCostado 1s ease-in-out forwards;
+}
+
+@mixin animacion-aparecer-desde-el-costado {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +43,7 @@ html {
 }
 
 .navbar {
-    background-color: rgba(174, 221, 148, 1);
+    background-color: $color1;
 
         &-brand img{
             height: 90px;
@@ -24,7 +54,7 @@ html {
     color: rgb(0, 0, 0) !important;
 
         &:hover {
-            color: rgba(240, 240, 240, 1) !important;
+            color: $color3 !important;
         }
 }
 
@@ -37,10 +67,15 @@ html {
     font-weight: bold;
 
         h1 {
-            color: rgba(240, 240, 240, 1);
+            color: $color3;
             text-shadow: 3px 2px 9px rgb(0, 0, 0);
             font-size: 35px;
+            @include animacion;
         }
+}
+
+@keyframes aparecerDesdeElCostado {
+    @include animacion-aparecer-desde-el-costado;
 }
 
 .btn {
@@ -48,10 +83,11 @@ html {
     font-weight: bold;
     transition: transform 0.5s ease;
     margin-top: 20px;
-    background-image: linear-gradient(to left, rgb(95, 163, 57), rgba(174, 221, 148, 1));
+    background-image: linear-gradient(to left, $color2, $color1);
 
         &:hover {
             transform: scale(1.1);
+            box-shadow: 0 0 10px rgb(255, 255, 255);
         }
 }
 
@@ -70,18 +106,9 @@ html {
         }
 }
 
-@mixin degradado {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 40px;
-    font-size: 30px;
-    font-family: "Quicksand", sans-serif;
-}
-
 .degradado {
     @include degradado;
-    background-image: linear-gradient(to right, rgb(95, 163, 57), rgba(174, 221, 148, 1));
+    background-image: linear-gradient(to right, $color2, $color1);
 }
 
 .nleft {
@@ -96,7 +123,7 @@ html {
 }
 
 .refugio {
-    background-color: rgba(240, 240, 240, 1);
+    background-color: $color3;
 
         p {
             font-size: 25px;
@@ -123,7 +150,7 @@ html {
 }
 
 .mapa {
-    background-color: rgba(240, 240, 240, 1);
+    background-color: $color3;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -147,6 +174,7 @@ html {
         font-size: 36px;
         text-shadow: 3px 2px 9px rgb(125, 95, 95);
         margin-top: 30px;
+        @include animacion;
     }
 }
 
@@ -172,7 +200,7 @@ html {
 }
 
 .nuestra-huerta {
-    background-color: rgba(174, 221, 148, 1);
+    background-color: $color1;
 }
 
 .manzanas {
@@ -240,6 +268,7 @@ html {
 
     h1 {
         text-shadow: 3px 2px 9px rgb(125, 95, 95);
+        @include animacion;
     }
 }
 
@@ -248,7 +277,7 @@ html {
 .hab3 {
     display: flex;
     justify-content: center;
-    background-color: rgba(240, 240, 240, 1);
+    background-color: $color3;
     margin-top: 25px;
     margin-bottom: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -267,7 +296,7 @@ html {
 .suite {
     padding-top: 80px;
 
-    h3 {
+    h2 {
         margin-bottom: 30px;
         margin-left: 40px;
         margin-right: 80px;
@@ -304,9 +333,9 @@ section {
             margin: 30px;
         }
 
-        .standard h3,
-        .deluxe h3,
-        .suite h3 {
+        .standard h2,
+        .deluxe h2,
+        .suite h2 {
             font-size: 26px;
         }
 
@@ -345,6 +374,7 @@ section {
 
     h1 {
         text-shadow: 3px 2px 9px rgb(125, 95, 95);
+        @include animacion;
     }
 }
 
@@ -395,22 +425,23 @@ section {
 
     &-body {
         border-radius: 0 0 10px 10px;
-        background-color: rgba(240, 240, 240, 1);
+        background-color: $color3;
         padding: 20px 15px;
         text-align: justify;
         border: 1px solid rgb(202, 202, 202);
     }
 }
 
-// .accordion-header {
-//     .accordion-button {
-//         font-size: 26px;
-//     }
-// }
+.accordion-header {
 
-// .accordion-body {
-//     font-size: 20px;
-// }
+    .accordion-button {
+        font-size: 25px;
+    }
+}
+
+.accordion-body{
+    font-size: 20px;
+}
 
 @media only screen and (min-width: 480px) {
     .card-header {
@@ -450,14 +481,14 @@ section {
 
 .titulog {
     @include degradado;
-    background-image: linear-gradient(to right, rgb(95, 163, 57), rgba(174, 221, 148, 1));
+    background-image: linear-gradient(to right, $color2, $color1);
     margin-left: 20px;
     margin-right: 20px;
 }
 
 .galeria {
     width: 100%;
-    background-color: rgba(240, 240, 240, 1);
+    background-color: $color3;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, 200px);
@@ -573,8 +604,9 @@ section {
     background-size: cover;
 
     h1 {
-        color: rgba(240, 240, 240, 1);
+        color: $color3;
         text-shadow: 3px 2px 9px rgb(0, 0, 0);
+        @include animacion;
     }
 }
 
@@ -604,10 +636,10 @@ section {
     }
 
     .btn {
-        background-color: rgba(174, 221, 148, 1);
+        background-image: linear-gradient(to left, $color2, $color1);
 
         &:hover {
-            box-shadow: 0 0 10px rgba(174, 221, 148, 1);
+            box-shadow: 0 0 10px rgb(125, 95, 95);
         }
     }
 }
@@ -634,7 +666,7 @@ section {
 }
 
 footer {
-    background-color: rgba(174, 221, 148, 1);
+    background-color: $color1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -660,7 +692,7 @@ footer {
 }
 
 footer a:hover {
-    color: rgba(240, 240, 240, 1);
+    color: $color3;
 }
 
 .whatsapp {
@@ -676,12 +708,16 @@ footer a:hover {
     border-radius: 50%;
     font-size: 30px;
     border: 2px solid rgb(255, 255, 255);
+
+        &:hover {
+            color: rgb(162, 162, 162);
+        }
 }
 
 .subir {
     height: 40px;
     width: 40px;
-    background-color: rgba(174, 221, 148, 1);
+    background-color: $color1;
     color: rgb(255, 255, 255);
     position: fixed;
     right: 40px;
@@ -691,6 +727,10 @@ footer a:hover {
     line-height: 40px;
     border-radius: 50%;
     box-shadow: 0 0 5px 3px rgb(249, 249, 249);
+
+        &:hover {
+            color: rgb(162, 162, 162);
+        }
 }
 
 @media only screen and (max-width: 768px) {
@@ -711,8 +751,19 @@ footer a:hover {
         margin: 0 5px;
     }
 
-    .degradado, .title-huerta {
+    .degradado, .title-huerta, .titulog, .card-title {
         font-size: 22px;
+    }
+
+    .accordion-header {
+
+        .accordion-button {
+            font-size: 22px;
+        }
+    }
+
+    .accordion-body{
+        font-size: 18px;
     }
 
     .whatsapp, .subir {
