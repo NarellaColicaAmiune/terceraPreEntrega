@@ -20,7 +20,7 @@ $color3: rgba(240, 240, 240, 1);
     animation: aparecer 1s ease-in-out forwards;
 }
 
-@keyframes animacion-aparecer {
+@mixin animacion-aparecer {
     from {
         opacity: 0;
         transform: translateX(-100px);
@@ -72,6 +72,10 @@ html {
             font-size: 35px;
             @include animacion;
         }
+}
+
+@keyframes aparecer {
+    @include animacion-aparecer;
 }
 
 .btn {
