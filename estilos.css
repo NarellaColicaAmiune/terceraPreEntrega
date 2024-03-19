@@ -27,7 +27,7 @@ html {
 
 .jumbotron1 {
   height: 500px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2156862745), rgba(136, 136, 136, 0.1647058824)), url(multimedia/castle-1374916_1280\ \(1\).jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2156862745), rgba(136, 136, 136, 0.1647058824)), url(multimedia/castle-137.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,10 +39,10 @@ html {
   font-size: 35px;
   opacity: 0;
   transform: translateX(-100px);
-  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
+  animation: aparecer 1s ease-in-out forwards;
 }
 
-@keyframes aparecerDesdeElCostado {
+@keyframes aparecer {
   from {
     opacity: 0;
     transform: translateX(-100px);
@@ -88,7 +88,7 @@ html {
 }
 
 .nleft {
-  background-image: url(multimedia/bed-1839184_1280.jpg);
+  background-image: url(multimedia/bed-183918.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -137,7 +137,7 @@ html {
 /* Refugio Silvestre */
 .jumbotron2 {
   height: 500px;
-  background-image: url(multimedia/bedroom-5772286_1280.jpg);
+  background-image: url(multimedia/bedroom-5772.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -148,7 +148,7 @@ html {
   margin-top: 30px;
   opacity: 0;
   transform: translateX(-100px);
-  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
+  animation: aparecer 1s ease-in-out forwards;
 }
 
 .sobre-nosotros h2 {
@@ -174,7 +174,7 @@ html {
 }
 
 .manzanas {
-  background-image: url(multimedia/apples-490475_1280.jpg);
+  background-image: url(multimedia/apples.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -198,7 +198,7 @@ html {
 }
 
 .alimentos {
-  background-image: url(multimedia/vegetables-752153_1280.jpg);
+  background-image: url(multimedia/vegetables.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -231,7 +231,7 @@ html {
 /* Habitaciones */
 .jumbotron3 {
   height: 500px;
-  background-image: url(multimedia/bedroom-1872196_1280.jpg);
+  background-image: url(multimedia/bedroom-187.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -240,7 +240,7 @@ html {
   text-shadow: 3px 2px 9px rgb(125, 95, 95);
   opacity: 0;
   transform: translateX(-100px);
-  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
+  animation: aparecer 1s ease-in-out forwards;
 }
 
 .hab1,
@@ -331,7 +331,7 @@ section i {
 /* Servicios */
 .jumbotron4 {
   height: 500px;
-  background-image: url(multimedia/woman-4373078_1280.jpg);
+  background-image: url(multimedia/woman-437.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -340,7 +340,7 @@ section i {
   text-shadow: 3px 2px 9px rgb(125, 95, 95);
   opacity: 0;
   transform: translateX(-100px);
-  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
+  animation: aparecer 1s ease-in-out forwards;
 }
 
 .img1,
@@ -464,28 +464,28 @@ section i {
   transform: scale(1.05);
 }
 .galeria .item1 {
-  background-image: url(multimedia/restaurant-449952_1280.jpg);
+  background-image: url(multimedia/restaurant-44.webp);
 }
 .galeria .item2 {
-  background-image: url(multimedia/barista-5055060_1280.jpg);
+  background-image: url(multimedia/barista-50.webp);
 }
 .galeria .item3 {
-  background-image: url(multimedia/platter-2009590_1280.jpg);
+  background-image: url(multimedia/platter-20.webp);
 }
 .galeria .item4 {
-  background-image: url(multimedia/bed-6830011_1920.jpg);
+  background-image: url(multimedia/bed-68.webp);
 }
 .galeria .item5 {
-  background-image: url(multimedia/towel-759980_1280.jpg);
+  background-image: url(multimedia/towel-75.webp);
 }
 .galeria .item6 {
-  background-image: url(multimedia/summer-1836046_1280.jpg);
+  background-image: url(multimedia/summer-18.webp);
 }
 .galeria .item7 {
-  background-image: url(multimedia/mountaineering-455338_1280.jpg);
+  background-image: url(multimedia/mountaineering-455.webp);
 }
 .galeria .item8 {
-  background-image: url(multimedia/spa-853462_1280.jpg);
+  background-image: url(multimedia/spa-853.webp);
 }
 
 @media only screen and (min-width: 480px) {
@@ -535,7 +535,7 @@ section i {
 /* Contacto */
 .jumbotron5 {
   height: 500px;
-  background-image: url(multimedia/apartment-5346461_1280.jpg);
+  background-image: url(multimedia/apartment-53.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -545,7 +545,7 @@ section i {
   text-shadow: 3px 2px 9px rgb(0, 0, 0);
   opacity: 0;
   transform: translateX(-100px);
-  animation: aparecerDesdeElCostado 1s ease-in-out forwards;
+  animation: aparecer 1s ease-in-out forwards;
 }
 
 .container {

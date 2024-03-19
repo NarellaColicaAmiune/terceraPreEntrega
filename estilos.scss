@@ -17,10 +17,10 @@ $color3: rgba(240, 240, 240, 1);
 @mixin animacion {
     opacity: 0;
     transform: translateX(-100px);
-    animation: aparecerDesdeElCostado 1s ease-in-out forwards;
+    animation: aparecer 1s ease-in-out forwards;
 }
 
-@mixin animacion-aparecer-desde-el-costado {
+@mixin animacion-aparecer {
     from {
         opacity: 0;
         transform: translateX(-100px);
@@ -60,7 +60,7 @@ html {
 
 .jumbotron1 {
     height: 500px;
-    background-image: linear-gradient(#00000037, #8888882a), url(multimedia/castle-1374916_1280\ \(1\).jpg);
+    background-image: linear-gradient(#00000037, #8888882a), url(multimedia/castle-137.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -74,8 +74,8 @@ html {
         }
 }
 
-@keyframes aparecerDesdeElCostado {
-    @include animacion-aparecer-desde-el-costado;
+@keyframes aparecer {
+    @include animacion-aparecer;
 }
 
 .btn {
@@ -112,7 +112,7 @@ html {
 }
 
 .nleft {
-    background-image: url(multimedia/bed-1839184_1280.jpg);
+    background-image: url(multimedia/bed-183918.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -165,7 +165,7 @@ html {
 
 .jumbotron2 {
     height: 500px;
-    background-image: url(multimedia/bedroom-5772286_1280.jpg);
+    background-image: url(multimedia/bedroom-5772.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -204,7 +204,7 @@ html {
 }
 
 .manzanas {
-    background-image: url(multimedia/apples-490475_1280.jpg);
+    background-image: url(multimedia/apples.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -223,7 +223,7 @@ html {
 }
 
 .alimentos {
-    background-image: url(multimedia/vegetables-752153_1280.jpg);
+    background-image: url(multimedia/vegetables.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -261,7 +261,7 @@ html {
 
 .jumbotron3 {
     height: 500px;
-    background-image: url(multimedia/bedroom-1872196_1280.jpg);
+    background-image: url(multimedia/bedroom-187.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -367,7 +367,7 @@ section {
 
 .jumbotron4 {
     height: 500px;
-    background-image: url(multimedia/woman-4373078_1280.jpg);
+    background-image: url(multimedia/woman-437.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -508,35 +508,35 @@ section {
     }
 
     .item1 {
-        background-image: url(multimedia/restaurant-449952_1280.jpg);
+        background-image: url(multimedia/restaurant-44.webp);
     }
 
     .item2 {
-        background-image: url(multimedia/barista-5055060_1280.jpg);
+        background-image: url(multimedia/barista-50.webp);
     }
 
     .item3 {
-        background-image: url(multimedia/platter-2009590_1280.jpg);
+        background-image: url(multimedia/platter-20.webp);
     }
 
     .item4 {
-        background-image: url(multimedia/bed-6830011_1920.jpg);
+        background-image: url(multimedia/bed-68.webp);
     }
 
     .item5 {
-        background-image: url(multimedia/towel-759980_1280.jpg);
+        background-image: url(multimedia/towel-75.webp);
     }
 
     .item6 {
-        background-image: url(multimedia/summer-1836046_1280.jpg);
+        background-image: url(multimedia/summer-18.webp);
     }
 
     .item7 {
-        background-image: url(multimedia/mountaineering-455338_1280.jpg);
+        background-image: url(multimedia/mountaineering-455.webp);
     }
 
     .item8 {
-        background-image: url(multimedia/spa-853462_1280.jpg);
+        background-image: url(multimedia/spa-853.webp);
     }
 }
 
@@ -598,7 +598,7 @@ section {
 
 .jumbotron5 {
     height: 500px;
-    background-image: url(multimedia/apartment-5346461_1280.jpg);
+    background-image: url(multimedia/apartment-53.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
